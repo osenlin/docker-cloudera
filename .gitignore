@@ -1,0 +1,37 @@
+# Build and Release Folders
+bin-debug/
+bin-release/
+[Oo]bj/
+[Bb]in/
+
+# Other files and folders
+.settings/
+cdm-*/*
+fino-cdm-repo/clouderasources/CDH*
+fino-cdm-repo/clouderasources/*.json
+fino-cdm-repo/debfiles/*.deb
+
+# Executables
+*.swf
+*.air
+*.ipa
+*.apk
+
+# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
+# should NOT be excluded as they contain compiler settings and other important
+# information for Eclipse / Flash Builder.
+*.parcel
+fino-cdm-repo/clouderasources/CDH-5.14.0-1.cdh5.14.0.p0.24-xenial.parcel
+fino-cdm-repo/clouderasources/CDH-5.14.0-1.cdh5.14.0.p0.24-xenial.parcel.sha1
+fino-cdm-repo/clouderasources/CDH-5.14.0-1.cdh5.14.0.p0.24-xenial.parcel.sha1
+*.deb
+fino-cdm-repo/debfiles/cloudera-manager-agent_5.14.0-1.cm5140.p0.25~xenial-cm5_amd64.deb
+fino-cdm-repo/debfiles/cloudera-manager-daemons_5.14.0-1.cm5140.p0.25~xenial-cm5_all.deb
+fino-cdm-repo/debfiles/cloudera-manager-server-db-2_5.14.0-1.cm5140.p0.25~xenial-cm5_all.deb
+*.deb
+fino-cdm-repo/debfiles/cloudera-manager-daemons_5.14.0-1.cm5140.p0.25~xenial-cm5_all.deb
+fino-cdm-repo/debfiles/cloudera-manager-agent_5.14.0-1.cm5140.p0.25~xenial-cm5_amd64.deb
+fino-cdm-repo/debfiles/cloudera-manager-daemons_5.14.0-1.cm5140.p0.25~xenial-cm5_all.deb
+fino-cdm-repo/debfiles/cloudera-manager-server-db-2_5.14.0-1.cm5140.p0.25~xenial-cm5_all.deb
+fino-cdm-repo/debfiles/cloudera-manager-server-db_5.14.0-1.cm5140.p0.25~xenial-cm5_all.deb
+fino-cdm-repo/debfiles/cloudera-manager-server_5.14.0-1.cm5140.p0.25~xenial-cm5_all.deb

@@ -1,0 +1,56 @@
+version: '2'
+services: 
+  cdm-softnode:
+    mem_limit: 4000000000
+    memswap_limit: 6000000000
+    privileged: true
+    tty: true
+    image: fino-cdm-softnode:v1.0
+    #network_mode: host
+    ports:
+      - 22222:22
+      - 7182:7182
+      - 19000:9000
+      - 19001:9001
+    labels:
+      io.rancher.container.pull_image: always
+      io.rancher.scheduler.affinity:host_label: cdm.role.softnode=true
+      io.rancher.scheduler.affinity:container_label_ne: io.rancher.stack_service.name=$${stack_name}/$${service_name}
+      io.rancher.container.hostname_override: container_name
+  cdm-repo:
+    tty: true
+    image: fino-cdm-repo:v1.0
+#    network_mode: host
+    ports:
+      - 24500:80
+    labels:
+      io.rancher.container.pull_image: always
+      io.rancher.scheduler.affinity:host_label: cdm.role.repo=true
+      io.rancher.scheduler.affinity:container_label_ne: io.rancher.stack_service.name=$${stack_name}/$${service_name}
+      io.rancher.container.hostname_override: container_name
+  cdm-manager:
+    mem_limit: 4000000000
+    memswap_limit: 6000000000
+    tty: true
+    image: fino-cdm-manager:v1.0 
+    ports:
+      - 13306:3306
+      - 7180:7180
+      - 7182:7182
+      # host monitor alertPublisher
+      - 10102:10101
+      # cloudera-scm-agent
+      - 19000:9000
+      - 19001:9001
+      # ntp server
+      - 12300:123
+#    links:
+#      - cdm-softnode
+#      - cdm-repo
+    labels:
+      io.rancher.container.pull_image: always
+      io.rancher.scheduler.affinity:host_label: cdm.role.manager=true
+      io.rancher.scheduler.affinity:container_label_ne: io.rancher.stack_service.name=$${stack_name}/$${service_name}
+      io.rancher.container.hostname_override: container_name
+#   vloumns:
+#     - /cdm/mysql:/var/lib/mysql

@@ -1,0 +1,11 @@
+.catalog:
+  name: 'fino-cdm-cluster'
+  version: "v1.0"
+  decription: ' π”√clouder'
+  minimum_rancher_version: v1.2.0
+cdm-manager:
+  scale: 1
+cdm-softnode:
+  scale: 4
+cdm-repo:
+  scale: 1    
