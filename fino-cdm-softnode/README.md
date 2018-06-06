@@ -1,6 +1,11 @@
 # introduction
 这是cloudera manager部署集群的镜像。用于初始化集群的基础环境。
 
+# image build
+```shell
+docker image build -t docker.finogeeks.club/linzhihuang/fino-cdm-softnode:v2.0
+```
+
 # 初始化的环境  
 1. ntp
 2. ssh
