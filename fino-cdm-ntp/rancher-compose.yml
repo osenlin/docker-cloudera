@@ -1,0 +1,9 @@
+.catalog:
+  name: 'ntp-server-cluster'
+  version: "v1.0"
+  decription: ' π”√clouder'
+  minimum_rancher_version: v1.2.0
+ntp-server:
+  scale: 1
+ntp-client:
+  scale: 2    

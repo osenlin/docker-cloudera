@@ -1,0 +1,27 @@
+#################################################
+# NODE_TYPE，有俩种server，client，必须要指定
+#
+#################################################
+version: '2'
+services:
+  ntp-server:
+    tty: true
+    image: docker.finogeeks.club/linzhihuang/fino-cdm-ntp:v1.0
+    container_name: ntp-server
+    hostname: ntp-server
+    environment:
+      - NODE_TYPE=server
+    labels:
+      io.rancher.container.pull_image: always
+      io.rancher.scheduler.affinity:container_label_ne: io.rancher.stack_service.name=$${stack_name}/$${service_name}
+  ntp-client:
+    tty: true
+    image: docker.finogeeks.club/linzhihuang/fino-cdm-ntp:v1.0
+    depends_on:
+      - ntp-server
+    environment:
+      - NODE_TYPE=client
+      - NTP_SERVER_HOSTNAME=ntp-server
+    labels:
+      io.rancher.container.pull_image: always
+      io.rancher.scheduler.affinity:container_label_ne: io.rancher.stack_service.name=$${stack_name}/$${service_name}

@@ -48,8 +48,6 @@ server  127.127.1.0     # local clock
 fudge   127.127.1.0 stratum 10
 EOF
 
-service ntp stop
 service cloudera-scm-server stop
-service mysql stop
 
 #server fino-cdm-cluster-cdm-manager-1 prefer
