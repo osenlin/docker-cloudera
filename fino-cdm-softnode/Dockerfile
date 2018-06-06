@@ -1,4 +1,4 @@
-FROM docker.finogeeks.club/linzhihuang/fino-cdm-envbase:v1.0
+FROM docker.finogeeks.club/linzhihuang/fino-cdm-envbase:v2.0
 MAINTAINER linzhihuang "linzhihuang@finogeeks.com"
 ADD initfiles/apt.conf /etc/apt/
 # 填入fino-cdm-repo的宿主机host

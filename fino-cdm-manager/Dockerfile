@@ -1,4 +1,4 @@
-FROM docker.finogeeks.club/linzhihuang/fino-cdm-softnode:v1.0
+FROM docker.finogeeks.club/linzhihuang/fino-cdm-softnode:v2.0
 MAINTAINER linzhihuang "linzhihuang@finogeeks.com"
 RUN apt-get install -y cloudera-manager-server
 RUN echo root:root |chpasswd

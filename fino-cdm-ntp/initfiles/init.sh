@@ -1,14 +1,13 @@
 #!/bin/bash
 
 #set -e
-service ntp start
-# ntp服务器搭建
 if [ "$NODE_TYPE" == "server" ]; then
 cat >> /etc/ntp.conf <<EOF
 # 中国这边最活跃的时间服务器 : http://www.pool.ntp.org/zone/cn
-server 0.cn.pool.ntp.org
-server 0.asia.pool.ntp.org
-server 3.asia.pool.ntp.org
+server 0.ubuntu.pool.ntp.org 
+server 1.ubuntu.pool.ntp.org 
+server 2.ubuntu.pool.ntp.org 
+server 3.ubuntu.pool.ntp.org
 # allow update time by the upper server
 restrict 0.cn.pool.ntp.org nomodify notrap noquery
 restrict 0.asia.pool.ntp.org nomodify notrap noquery
@@ -22,7 +21,6 @@ EOF
 
 else
     echo "server ${NTP_SERVER_HOSTNAME} prefer" >> /etc/ntp.conf
+    echo "restrict ${NTP_SERVER_HOSTNAME} " >> /etc/ntp.conf
 fi
-
-service ntp stop
-
+service ntp restart

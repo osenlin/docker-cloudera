@@ -1,6 +1,7 @@
 FROM docker.finogeeks.club/linzhihuang/fino-cdm-envbase:v1.0
 MAINTAINER linzhihuang
 RUN mkdir -p /opt/cdm/
-COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY initfiles/init.sh /opt/cdm/
-CMD ["sh","-c","/opt/cdm/init.sh* && /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf"]
+RUN chmod a+x /opt/cdm/init.sh
+expose 123
+CMD ["sh","-c","/opt/cdm/init.sh* && bash"]

@@ -1,7 +1,7 @@
 ########################################################################
 # bind local port 24500
 #########################################################################
-FROM docker.finogeeks.club/linzhihuang/fino-cdm-envbase:v1.0
+FROM docker.finogeeks.club/linzhihuang/fino-cdm-envbase:v2.0
 MAINTAINER linzhihuang "linzhihuang@finogeeks.com"
 RUN apt-get -y install apache2
 RUN mkdir -p /data/soft/pool /data/soft/dist /data/soft/cloudera /var/log/apache2

@@ -48,6 +48,7 @@ server  127.127.1.0     # local clock
 fudge   127.127.1.0 stratum 10
 EOF
 
-service cloudera-scm-server stop
-
-#server fino-cdm-cluster-cdm-manager-1 prefer
+service cloudera-scm-server restart
+service ssh start
+service ntp restart
+service cloudera-scm-agent restart
