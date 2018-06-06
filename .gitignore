@@ -10,7 +10,7 @@ cdm-*/*
 fino-cdm-repo/clouderasources/CDH*
 fino-cdm-repo/clouderasources/*.json
 fino-cdm-repo/debfiles/*.deb
-
+.idea
 # Executables
 *.swf
 *.air
