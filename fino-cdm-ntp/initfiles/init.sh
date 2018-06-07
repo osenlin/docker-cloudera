@@ -2,6 +2,7 @@
 
 #set -e
 if [ "$NODE_TYPE" == "server" ]; then
+rm /etc/ntp.conf
 cat >> /etc/ntp.conf <<EOF
 # 中国这边最活跃的时间服务器 : http://www.pool.ntp.org/zone/cn
 server 0.ubuntu.pool.ntp.org 
