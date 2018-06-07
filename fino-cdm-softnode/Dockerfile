@@ -13,5 +13,4 @@ COPY initfiles/init_start.sh /opt/
 RUN chmod a+x /opt/init_start.sh
 WORKDIR /opt
 EXPOSE 22  9000 9001 7182
-COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 CMD ["sh", "-c", "/opt/init_start.sh* && bash"]

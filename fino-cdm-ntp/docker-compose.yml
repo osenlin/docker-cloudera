@@ -12,6 +12,8 @@ services:
       - "123"
     environment:
       - NODE_TYPE=server
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
     labels:
       io.rancher.container.pull_image: always
       io.rancher.scheduler.affinity:host_label: cdm.role.ntp=true
