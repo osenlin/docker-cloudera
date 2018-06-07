@@ -1,0 +1,1 @@
+*/10 * * * * ntpdate -s $NTP_SERVER_HOSTNAME && ntpdate -u $NTP_SERVER_HOSTNAME 2>&1
