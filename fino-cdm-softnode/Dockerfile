@@ -1,7 +1,7 @@
-FROM docker.finogeeks.club/linzhihuang/fino-cdm-envbase:v2.0
-MAINTAINER linzhihuang "linzhihuang@finogeeks.com"
+FROM fino-cdm-envbase:v2.0
+MAINTAINER linzhihuang "linzhihuang"
 ADD initfiles/apt.conf /etc/apt/
-# ÌîÈëfino-cdm-repoµÄËÞÖ÷»úhost
+# ï¿½ï¿½ï¿½ï¿½fino-cdm-repoï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½host
 RUN echo "deb http://192.168.10.82:24500/data /soft/" >>/etc/apt/sources.list
 RUN apt-get update -y
 RUN apt-get install -y lsb-base psmisc bash libsasl2-modules 

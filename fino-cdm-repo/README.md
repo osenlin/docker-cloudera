@@ -1,24 +1,24 @@
-# cloudera manager ±¾µØÔ´µÄ¹¹½¨
-Èç¹ûÔÚÏß°²×°cdm£¬ÓÉÓÚÍøÂçËÙ¶ÈÎÊÌâ»áµ¼ÖÂ°²×°ÊÂ¼şºÜ³¤£¬¹ÊÓÃ´Ë¹¹½¨CDM5.14.0µÄË½ÓĞÔ´£¬À´´ó´ó¼õ»º°²×°µÄÊÂ¼ş
+# cloudera manager æœ¬åœ°æºçš„æ„å»º
+å¦‚æœåœ¨çº¿å®‰è£…cdmï¼Œç”±äºç½‘ç»œé€Ÿåº¦é—®é¢˜ä¼šå¯¼è‡´å®‰è£…äº‹ä»¶å¾ˆé•¿ï¼Œæ•…ç”¨æ­¤æ„å»ºCDM5.14.0çš„ç§æœ‰æºï¼Œæ¥å¤§å¤§å‡ç¼“å®‰è£…çš„äº‹ä»¶
 
 # build image
 ```shell
 docker image build -t docker.finogeeks.club/linzhihuang/fino-cdm-repo:v2.0
 ```
-# ĞèÒª×öµÄÊÂÇé
-1. ´ÓclouderaµÄ¹ÙÍøÏÂÔØ°²×°°ü  
+# éœ€è¦åšçš„äº‹æƒ…
+1. ä»clouderaçš„å®˜ç½‘ä¸‹è½½å®‰è£…åŒ…  
     - CDH-5.14.0-1.cdh5.14.0.p0.24-xenial.parcel
     - CDH-5.14.0-1.cdh5.14.0.p0.24-xenial.parcel.sha1
     - manifest.json  
 
-    ½«ÉÏÃæµÄÈı¸öÎÄ¼şÏÂÔØÍêºó·Åµ½clouderasourcesÄ¿Â¼ÏÂ
-2. ´ÓclouderaÌá¹©µÄaptÔ´ÏÂÔØdebÎÄ¼ş
+    å°†ä¸Šé¢çš„ä¸‰ä¸ªæ–‡ä»¶ä¸‹è½½å®Œåæ”¾åˆ°clouderasourcesç›®å½•ä¸‹
+2. ä»clouderaæä¾›çš„aptæºä¸‹è½½debæ–‡ä»¶
     - cloudera-manager-agent_5.14.0-1.cm5140.p0.25~xenial-cm5_amd64.deb
     - cloudera-manager-daemons_5.14.0-1.cm5140.p0.25~xenial-cm5_all.deb
     - cloudera-manager-server_5.14.0-1.cm5140.p0.25~xenial-cm5_all.deb
     - cloudera-manager-server-db_5.14.0-1.cm5140.p0.25~xenial-cm5_all.deb
     - cloudera-manager-server-db-2_5.14.0-1.cm5140.p0.25~xenial-cm5_all.deb
 
-    ½«ÉÏÃæµÄÎå¸öÎÄ¼şÏÂÔØÍêºó·Åµ½debfilesÄ¿Â¼ÏÂ
-# ĞèÒª×öµÄÊÂÇé
-1. ¿ª·Å24500µÄ¶Ë¿Ú£¬Ó³Éäµ½ÈİÆ÷80¶Ë¿Ú
+    å°†ä¸Šé¢çš„äº”ä¸ªæ–‡ä»¶ä¸‹è½½å®Œåæ”¾åˆ°debfilesç›®å½•ä¸‹
+# éœ€è¦åšçš„äº‹æƒ…
+1. å¼€æ”¾24500çš„ç«¯å£ï¼Œæ˜ å°„åˆ°å®¹å™¨80ç«¯å£

@@ -1,4 +1,4 @@
-FROM docker.finogeeks.club/linzhihuang/fino-cdm-envbase:v1.0
+FROM fino-cdm-envbase:v2.0
 MAINTAINER linzhihuang
 RUN mkdir -p /opt/cdm/
 COPY initfiles/init.sh /opt/cdm/

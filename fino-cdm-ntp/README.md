@@ -1,33 +1,36 @@
 # introduce
-ÓÃÓÚ¹¹½¨cdmËùÐèÒªµÄntp·þÎñÆ÷¾µÏñ
+ç”¨äºŽæž„å»ºcdmæ‰€éœ€è¦çš„ntpæœåŠ¡å™¨é•œåƒï¼Œå®žçŽ°å®¿ä¸»æœºå’ŒntpserveråŒæ­¥ï¼ŒntpserveräºŽntpclientçš„åŒæ­¥  
+
+# é¡¹ç›®åœ°å€
+[é¡¹ç›®github](https://github.com/osenlin/docker-ntp)
 
 # image build
 ```shell
-docker image build -t docker.finogeeks.club/linzhihuang/fino-cdm-ntp:v2.0
+docker image build -t fino-cdm-ntp:v2.0
 ```
-
 # run
 ```shell
-docker run   --rm -it docker.finogeeks.club/linzhihuang/fino-cdm-ntp:v2.0
+docker run   --rm -it fino-cdm-ntp:v2.0
 ```
 
 # run cluster
 ```shell
 docker compose up
-```  
+``` 
+
 ## config  
-ÎÒÃÇÍ¨¹ýÏÂÃæµÄ¼¸²½À´Íê³Éntp·þÎñ¶ËºÍ¿Í»§¶ËµÄ´î½¨
-1. ÔÚserverµÄ·þÎñ»úÆ÷ÉÏÎÒÃÇÍ¨¹ý
+æˆ‘ä»¬é€šè¿‡ä¸‹é¢çš„å‡ æ­¥æ¥å®ŒæˆntpæœåŠ¡ç«¯å’Œå®¢æˆ·ç«¯çš„æ­å»º
+1. åœ¨serverçš„æœåŠ¡æœºå™¨ä¸Šæˆ‘ä»¬é€šè¿‡
     ```yaml
     volumes:
         - /etc/localtime:/etc/localtime:ro 
     ```
-    ÈÃdockerºÍ·þÎñÆ÷µÄÊ±¼ä±£³ÖÒ»ÖÂ  
-2. ÔÚserverµÄ·þÎñÉÏ»¹ÐèÒªÅäÖÃ/etc/ntp.conf£¬·½Ê½ÈçÏÂshell
+    è®©dockerå’ŒæœåŠ¡å™¨çš„æ—¶é—´ä¿æŒä¸€è‡´  
+2. åœ¨serverçš„æœåŠ¡ä¸Šè¿˜éœ€è¦é…ç½®/etc/ntp.confï¼Œæ–¹å¼å¦‚ä¸‹shell
     ```shell
     rm /etc/ntp.conf
     cat >> /etc/ntp.conf <<EOF
-    # ÖÐ¹úÕâ±ß×î»îÔ¾µÄÊ±¼ä·þÎñÆ÷ : http://www.pool.ntp.org/zone/cn
+    # ä¸­å›½è¿™è¾¹æœ€æ´»è·ƒçš„æ—¶é—´æœåŠ¡å™¨ : http://www.pool.ntp.org/zone/cn
     server 0.ubuntu.pool.ntp.org 
     server 1.ubuntu.pool.ntp.org 
     server 2.ubuntu.pool.ntp.org 
@@ -38,13 +41,13 @@ docker compose up
     restrict 3.asia.pool.ntp.org nomodify notrap noquery
     # Undisciplined Local Clock. This is a fake driver intended for backup
     # and when no outside source of synchronized time is available.
-    # Íâ²¿Ê±¼ä·þÎñÆ÷²»¿ÉÓÃÊ±£¬ÒÔ±¾µØÊ±¼ä×÷ÎªÊ±¼ä·þÎñ
+    # å¤–éƒ¨æ—¶é—´æœåŠ¡å™¨ä¸å¯ç”¨æ—¶ï¼Œä»¥æœ¬åœ°æ—¶é—´ä½œä¸ºæ—¶é—´æœåŠ¡
     server  127.127.1.0     # local clock
     fudge   127.127.1.0 stratum 10
     EOF
     ```
-3. ÔÚclientµÄ·þÎñÉÏ¶Ô/etc/ntp/¡£·½Ê½ÈçÏÂshell
+3. åœ¨clientçš„æœåŠ¡ä¸Šå¯¹/etc/ntp/ã€‚æ–¹å¼å¦‚ä¸‹shell
     ```shell
     echo "server ${NTP_SERVER_HOSTNAME} prefer" >> /etc/ntp.conf
     echo "restrict ${NTP_SERVER_HOSTNAME} " >> /etc/ntp.conf
-    ```
+    ```  

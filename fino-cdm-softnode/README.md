@@ -1,15 +1,15 @@
 # introduction
-ÕâÊÇcloudera manager²¿Êğ¼¯ÈºµÄ¾µÏñ¡£ÓÃÓÚ³õÊ¼»¯¼¯ÈºµÄ»ù´¡»·¾³¡£
+è¿™æ˜¯cloudera manageréƒ¨ç½²é›†ç¾¤çš„é•œåƒã€‚ç”¨äºåˆå§‹åŒ–é›†ç¾¤çš„åŸºç¡€ç¯å¢ƒã€‚
 
 # image build
 ```shell
-docker image build -t docker.finogeeks.club/linzhihuang/fino-cdm-softnode:v2.0
+docker image build -t fino-cdm-softnode:v2.0
 ```
 
-# ³õÊ¼»¯µÄ»·¾³  
+# åˆå§‹åŒ–çš„ç¯å¢ƒ  
 1. ntp
 2. ssh
 3. superviosr
 4. cloudera-manager-daemons
 5. cloudera-manager-agent
-µÈ·şÎñ
+ç­‰æœåŠ¡

@@ -1,5 +1,5 @@
-FROM docker.finogeeks.club/linzhihuang/fino-cdm-softnode:v2.0
-MAINTAINER linzhihuang "linzhihuang@finogeeks.com"
+FROM fino-cdm-softnode:v2.0
+MAINTAINER linzhihuang 
 RUN apt-get install -y cloudera-manager-server
 RUN echo root:root |chpasswd
 RUN DEBIAN_FRONTEND=noninteractive apt install -y mysql-server=5.7.22-0ubuntu0.16.04.1

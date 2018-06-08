@@ -5,7 +5,7 @@ services:
     memswap_limit: 6000000000
     privileged: true
     tty: true
-    image: docker.finogeeks.club/linzhihuang/fino-cdm-softnode:v2.0
+    image: fino-cdm-softnode:v2.0
     #network_mode: host
     ports:
       - 22222:22
@@ -19,7 +19,7 @@ services:
       io.rancher.container.hostname_override: container_name
   cdm-repo:
     tty: true
-    image:  docker.finogeeks.club/linzhihuang/fino-cdm-repo:v2.0
+    image:  fino-cdm-repo:v2.0
 #    network_mode: host
     ports:
       - 24500:80
@@ -32,7 +32,7 @@ services:
     mem_limit: 4000000000
     memswap_limit: 6000000000
     tty: true
-    image:  docker.finogeeks.club/linzhihuang/fino-cdm-manager:v2.0 
+    image:  fino-cdm-manager:v2.0 
     ports:
       - 13306:3306
       - 7180:7180
