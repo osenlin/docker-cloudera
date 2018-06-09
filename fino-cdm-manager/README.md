@@ -1,13 +1,13 @@
 # introduction
-Õâ¸öcloudera manager¾µÏñ£¬Í¨¹ı±¾¾µÏñ¿ÉÒÔÆô¶¯cloudera managerµÄweb¹ÜÀí½çÃæ
+è¿™ä¸ªcloudera manageré•œåƒï¼Œé€šè¿‡æœ¬é•œåƒå¯ä»¥å¯åŠ¨cloudera managerçš„webç®¡ç†ç•Œé¢
 
 # image build
 ```shell
-docker image build -t docker.finogeeks.club/linzhihuang/fino-cdm-mananger:v2.0
+docker image build -t fino-cdm-mananger:v2.0
 ```
 
 # use
-webµØÖ·: http://host:7180
+webåœ°å€: http://host:7180
 
 # mind
-1. ±ØĞë¶ÔÍâ¿ª·Å7180£¬7182£¬9000£¬9001¶Ë¿Ú
+1. å¿…é¡»å¯¹å¤–å¼€æ”¾7180ï¼Œ7182ï¼Œ9000ï¼Œ9001ç«¯å£

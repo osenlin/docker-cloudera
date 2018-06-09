@@ -3,7 +3,7 @@
 
 # build image
 ```shell
-docker image build -t docker.finogeeks.club/linzhihuang/fino-cdm-repo:v2.0
+docker image build -t fino-cdm-repo:v2.0
 ```
 # 需要做的事情
 1. 从cloudera的官网下载安装包  

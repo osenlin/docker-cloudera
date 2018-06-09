@@ -5,7 +5,7 @@ version: '2'
 services:
   ntp-server:
     tty: true
-    image: docker.finogeeks.club/linzhihuang/fino-cdm-ntp:v2.0
+    image: fino-cdm-ntp:v2.0
     container_name: ntp-server
     hostname: ntp-server
     expose:
@@ -20,7 +20,7 @@ services:
       io.rancher.scheduler.affinity:container_label_ne: io.rancher.stack_service.name=$${stack_name}/$${service_name}
   ntp-client:
     tty: true
-    image: docker.finogeeks.club/linzhihuang/fino-cdm-ntp:v2.0
+    image: fino-cdm-ntp:v2.0
     expose:
       - "123"
     depends_on:

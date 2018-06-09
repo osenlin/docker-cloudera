@@ -1,7 +1,6 @@
 FROM fino-cdm-envbase:v2.0
 MAINTAINER linzhihuang "linzhihuang"
 ADD initfiles/apt.conf /etc/apt/
-# ����fino-cdm-repo��������host
 RUN echo "deb http://192.168.10.82:24500/data /soft/" >>/etc/apt/sources.list
 RUN apt-get update -y
 RUN apt-get install -y lsb-base psmisc bash libsasl2-modules 

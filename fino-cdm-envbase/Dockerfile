@@ -1,4 +1,3 @@
-#image name:docker.finogeeks.club/linzhihuang/fino-cdm-envbase:v1.0
 FROM java
 MAINTAINER linzhihuang 
 RUN apt-get update
